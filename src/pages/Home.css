@@ -1,0 +1,57 @@
+.home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./foto\ da\ frente\ mcar.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  text-align: center;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem; /* Espaçamento entre o input e o botão */
+  margin-bottom: 1rem;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 300px; /* Ajuste do tamanho do input */
+}
+
+.search-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.search-btn:hover {
+  background-color: #27ae60;
+}
+
+.add-vehicle-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-vehicle-btn:hover {
+  background-color: #2980b9;
+}

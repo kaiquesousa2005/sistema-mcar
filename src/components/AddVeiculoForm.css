@@ -1,0 +1,19 @@
+.add-vehicle-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.add-vehicle-form button {
+  background-color: #0dc71f;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.add-vehicle-form input {
+    border: none;
+    padding: 12px;
+    width: 400px;
+}

@@ -1,0 +1,59 @@
+.vehicle-list ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Organiza os itens em linha */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
+  gap: 1rem; /* Espaçamento entre os itens */
+  justify-content: center; /* Centraliza os itens na linha */
+}
+
+.vehicle-item {
+  background-color: white;
+  width: 20%; /* Define a largura de cada item */
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destacar os itens */
+  border-radius: 8px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o texto */
+}
+
+.vehicle-item p {
+  color: black;
+}
+
+.vehicle-item h3 {
+  margin-top: 0;
+  color: black;
+}
+
+.vehicle-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  color: #ffffff;
+  background-color: #2ecc71;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.vehicle-item a:hover {
+  background-color: #28a745; /* Cor mais escura ao passar o mouse */
+}
+
+.delete-vehicle-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-vehicle-btn:hover {
+  background-color: #c82333;
+}

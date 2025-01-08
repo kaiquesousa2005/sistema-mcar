@@ -1,0 +1,148 @@
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../pages/foto\ da\ frente\ mcar.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.vehicle-details {
+  background-color: rgba(255, 255, 255, 0.911);
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-details p{
+  color: black;
+}
+
+.vehicle-details h2 {
+  margin-top: 0;
+  color: #000000;
+}
+
+.vehicle-details h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: #000000;
+}
+
+.expense-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.expense-item {
+  background-color: #f0f0f0;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.expense-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.expense-category {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.expense-amount {
+  color: #e74c3c;
+  margin-right: 16px;
+}
+
+.expense-description {
+  color: #797a7a;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.total-expenses {
+  font-weight: bold;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.expense-table th,
+.expense-table td {
+  padding: 0.5rem;
+  text-align: left;
+  border: 1px solid #525252;
+  color: black;
+}
+
+.expense-table th {
+  background-color: #5a5a5a;
+  font-weight: bold;
+}
+
+.category-cell {
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+.category-total {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-top: 0.5rem;
+}
+
+.delete-expense-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.delete-expense-btn:hover {
+  transform: scale(1.2);
+}
+
+.loading,
+.error,
+.not-found {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.download-pdf-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.download-pdf-btn:hover {
+  background-color: #2980b9;
+}
