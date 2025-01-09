@@ -122,7 +122,7 @@
 }
 
 .login-button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -136,20 +136,20 @@
   background-color: #45a049;
 }
 
-
 @media (min-width: 249px) and (max-width: 480px) {
   .login-box {
     padding: 20px;
   }
-  
+
   .login-title {
     font-size: 20px;
   }
-  
+
   .input-group input {
     font-size: 14px;
+    width: 90%;
   }
-  
+
   .login-button {
     font-size: 14px;
   }
@@ -160,4 +160,3 @@
     max-width: 350px;
   }
 }
-
