@@ -17,3 +17,16 @@
     padding: 12px;
     width: 400px;
 }
+@media (min-width: 249px) and (max-width: 480px) {
+  .add-vehicle-form input {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .add-vehicle-form input {
+    width: 100%;
+    max-width: 350px;
+  }
+}

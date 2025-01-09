@@ -146,3 +146,31 @@ body {
 .download-pdf-btn:hover {
   background-color: #2980b9;
 }
+
+@media (min-width: 249px) and (max-width: 480px) {
+  .vehicle-details {
+    width: 90%;
+    padding: 1rem;
+  }
+  
+  .expense-table {
+    font-size: 0.6rem;
+  }
+  
+  .expense-table th,
+  .expense-table td {
+    padding: 0.2rem;
+    font-size: 10px;
+  }
+  .category-total {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .vehicle-details {
+    max-width: 500px;
+  }
+}
+
+

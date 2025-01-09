@@ -57,3 +57,16 @@
 .delete-vehicle-btn:hover {
   background-color: #c82333;
 }
+
+@media (min-width: 249px) and (max-width: 480px) {
+  .vehicle-item {
+    width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .vehicle-item {
+    width: 45%;
+  }
+}
+

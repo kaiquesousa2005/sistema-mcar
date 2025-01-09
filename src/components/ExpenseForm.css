@@ -38,3 +38,29 @@
 .expense-form button:hover {
   background-color: #2980b9;
 }
+@media (min-width: 249px) and (max-width: 480px) {
+  .expense-form select,
+  .expense-form input {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .expense-form button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .expense-form select,
+  .expense-form input {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .expense-form button {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+

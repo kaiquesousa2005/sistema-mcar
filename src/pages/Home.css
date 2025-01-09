@@ -1,9 +1,4 @@
 .home {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./foto\ da\ frente\ mcar.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -55,3 +50,25 @@
 .add-vehicle-btn:hover {
   background-color: #2980b9;
 }
+
+/* Some CSS code here */
+
+@media (min-width: 249px) and (max-width: 480px) {
+  .search-bar input {
+    width: 180px;
+  }
+  
+  .search-btn,
+  .add-vehicle-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .search-bar input {
+    width: 250px;
+  }
+}
+
+
