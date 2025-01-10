@@ -1,10 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom"; // Importando Link para navegação instantânea
+import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import "./VeiculoList.css";
 
-const VeiculoList = ({ vehicles, onDeleteVeiculo }) => {
+const VeiculoList = ({ vehicles, onDeleteVeiculo, onEditVeiculo }) => {
   return (
     <div className="vehicle-list">
       {vehicles.length === 0 ? (
@@ -16,17 +16,25 @@ const VeiculoList = ({ vehicles, onDeleteVeiculo }) => {
               <h3>Veículo: {vehicle.name}</h3>
               <p>Placa: {vehicle.plate}</p>
               <p>Renavan: {vehicle.renavan}</p>
-              <button
-                className="delete-vehicle-btn"
-                onClick={() => onDeleteVeiculo(vehicle.id)}
-                aria-label="Deletar veículo"
-              >
-                <FontAwesomeIcon icon={faTrash} />
-              </button>
-              {/* Substituindo o <a> por <Link> */}
-              <Link to={`/veiculo/${vehicle.id}`} className="gastos-link">
-                Gastos
-              </Link>
+              <div className="vehicle-actions">
+                <button
+                  className="delete-vehicle-btn"
+                  onClick={() => onDeleteVeiculo(vehicle.id)}
+                  aria-label="Deletar veículo"
+                >
+                  <FontAwesomeIcon icon={faTrash} />
+                </button>
+                <button
+                  className="edit-vehicle-btn"
+                  onClick={() => onEditVeiculo(vehicle)}
+                  aria-label="Editar veículo"
+                >
+                  <FontAwesomeIcon icon={faEdit} />
+                </button>
+                <Link to={`/veiculo/${vehicle.id}`} className="gastos-link">
+                  Gastos
+                </Link>
+              </div>
             </li>
           ))}
         </ul>
@@ -36,3 +44,4 @@ const VeiculoList = ({ vehicles, onDeleteVeiculo }) => {
 };
 
 export default VeiculoList;
+

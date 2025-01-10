@@ -17,6 +17,26 @@
   text-align: center; /* Centraliza o texto */
 }
 
+.vehicle-actions {
+  margin-top: 1rem;
+}
+
+.edit-vehicle-btn {
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-left: 50px;
+}
+
+.edit-vehicle-btn:hover {
+  background-color: #e0a800;
+}
+
 .vehicle-item p {
   color: black;
 }

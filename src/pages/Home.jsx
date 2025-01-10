@@ -11,6 +11,7 @@ const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [editingVehicle, setEditingVehicle] = useState(null);
 
   useEffect(() => {
     const fetchVehicles = async () => {
@@ -46,16 +47,28 @@ const Home = () => {
     setIsModalOpen(false);
   };
 
+  const handleUpdateVehicle = (updatedVehicle) => {
+    setVehicles((prevVehicles) =>
+      prevVehicles.map((vehicle) =>
+        vehicle.id === updatedVehicle.id ? updatedVehicle : vehicle
+      )
+    );
+    setIsModalOpen(false);
+    setEditingVehicle(null);
+  };
+
   const handleDeleteVehicle = async (vehicleId) => {
     try {
-      // Delete the vehicle from Firestore
       await deleteDoc(doc(db, "vehicles", vehicleId));
-      
-      // Update the local state
       setVehicles(vehicles.filter(vehicle => vehicle.id !== vehicleId));
     } catch (error) {
       console.error("Error deleting vehicle:", error);
     }
+  };
+
+  const handleEditVehicle = (vehicle) => {
+    setEditingVehicle(vehicle);
+    setIsModalOpen(true);
   };
 
   return (
@@ -73,15 +86,26 @@ const Home = () => {
             Buscar
           </button>
         </div>
-        <button className="add-vehicle-btn" onClick={() => setIsModalOpen(true)}>
+        <button className="add-vehicle-btn" onClick={() => {
+          setEditingVehicle(null);
+          setIsModalOpen(true);
+        }}>
           Adicionar Veículo
         </button>
         <VeiculoList
           vehicles={searchResults.length > 0 ? searchResults : vehicles}
           onDeleteVeiculo={handleDeleteVehicle}
+          onEditVeiculo={handleEditVehicle}
         />
-        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-          <AddVeiculoForm onAddVehicle={handleAddVehicle} />
+        <Modal isOpen={isModalOpen} onClose={() => {
+          setIsModalOpen(false);
+          setEditingVehicle(null);
+        }}>
+          <AddVeiculoForm
+            onAddVehicle={handleAddVehicle}
+            onUpdateVehicle={handleUpdateVehicle}
+            editingVehicle={editingVehicle}
+          />
         </Modal>
       </main>
     </div>
